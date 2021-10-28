@@ -1,19 +1,6 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-- https://raw.githubusercontent.com/tektoncd/catalog/main/task/npm/0.1/npm.yaml
-- e2e-app.ServiceAccount.yaml
-- create-configuration.Task.yaml
-- save-configuration.Task.yaml
-- deploy.Task.yaml
-- e2e-app.pipeline.yaml
-- e2e-app.Secret.yaml
-- git-credentials.Secret.yaml
-- production-repository.ConfigMap.yaml
-- webhook-receiver.EventListener.yaml
-- webhook-receiver.Role.yaml
-- webhook-receiver.RoleBinding.yaml
-- webhook-receiver.Route.yaml
-- webhook-receiver.ServiceAccount.yaml
-- webhook-receiver.TriggerBinding.yaml
-- webhook-receiver.TriggerTemplate.yaml
+  - deployment.yaml
+  - service.yaml
+  - route.yaml
